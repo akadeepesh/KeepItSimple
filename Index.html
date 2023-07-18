@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="func.js"></script>
+    <script>
+        $(document).ready(function(){
+        $(".start").click(function(){
+            $(".centerBox").fadeOut(500, function() {
+                $(".box").css("display", "flex" , function(){
+                    $(".box").fadeIn(5000);
+                });
+            });
+            });
+        });
+    </script>
+    <!-- 
+    Idea - get started pe click krte hi bubbles k sath centerBox ko upr uthane ka, then top se bahar nikal dene ka or cards ko
+    same speed me neeche se upr laane ka, and bubbles ki opacity to kam kr hi rhe hai time k sath     
+    
+    <script>
+        $(document).ready(function(){
+            setTimeout(function () {
+                $(".box").fadeIn();
+            }, 0);
+        });
+    </script> -->
+    <link rel="stylesheet" href="index.css">
+    <title>Later</title>
+</head>
+<body>
+    <div class="centerBox">
+        <div class="categoryWrapper" onmouseover="color_change()" onmouseout="color_back()">
+            <h1>KEEPING &nbsp;IT &nbsp;SIMPLE</h1>
+            <button>
+                <span>
+                    <span>
+                        <span class="start" onclick="fade_in()" data-attr-span="Get Started">
+                            Get Started
+                        </span>
+                    </span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="box">
+        <div class="card" id="shayari" onmouseover="big_s()" onmouseout="normal_s()" onclick="shift_s()">Shayari</div>
+        <div class="card" id="rap" onmouseover="big_r()" onmouseout="normal_r()" onclick="shift_r()">Rap</div>
+        <div class="card" id="dance" onmouseover="big_d()" onmouseout="normal_d()" onclick="shift_d()">Dance</div>
+        <div class="card" id="code" onmouseover="big_c()" onmouseout="normal_c()" onclick="shift_c()">{Code}</div>
+    </div>
+</body>
+</html>
